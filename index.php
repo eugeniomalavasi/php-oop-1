@@ -12,8 +12,20 @@ require_once 'models/genre.php';
 
 // var_dump($movie);
 
-$movie = new Movie("Peter Jackson", 2001);
+// MOVIE 1 PRIVATE
+$movie = new Movie();
 
 $movie->setMovieName("Lord Of The rings");
 $movie->setMovieDesc("Best film ever made in the history of the entire human kind");
-echo $movie->getMovieName() . '<br>' . $movie->getMovieDesc() ;
+$movie->setMovieDir("Peter Jackson");
+$movie->setMovieYear(2001);
+echo $movie->getMovieName() . '<br>' . $movie->getMovieDesc() .'<br>'. $movie->getMovieDir() .'<br>'. $movie->getMovieYear() . '<br>' . '<br>';
+
+// MOVIE 2 PRIVATE
+$movie_two = new Movie();
+
+$movie->setMovieName("Moon");
+$movie->setMovieDesc("Sam Bell è prossimo alla conclusione di un contratto di lavoro della durata di tre anni come unico residente della base mineraria lunare Sarang della Lunar Industries. Il suo compito è sovrintendere al funzionamento degli estrattori automatici, che estraggono elio-3 dalla superficie lunare");
+$movie->setMovieDir("Duncan Jones");
+$movie->setMovieYear(2009);
+echo $movie->getMovieName() . '<br>' . $movie->getMovieDesc() .'<br>'. $movie->getMovieDir() .'<br>'. $movie->getMovieYear();

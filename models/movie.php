@@ -30,10 +30,36 @@ class Movie {
     public function setMovieDesc(string $index_desc) {
         if (strlen($index_desc) > 0) {
             $this->description = $index_desc;
+        } else {
+            $this->description = "Nessuna descrizione presente";
         }
     }
 
     public function getMovieDesc() {
         return $this->description;
+    }
+
+    public function setMovieDir(string $index_director) {
+        if (strlen($index_director) > 0) {
+            $this->director = $index_director;
+        } else {
+            $this->director = "Nessun regista presente";
+        }
+    }
+
+    public function getMovieDir() {
+        return $this->director;
+    }
+
+    public function setMovieYear(string $index_year) {
+        if (strlen($index_year) > 0) {
+            $this->year = $index_year;
+        } else {
+            $this->year = "Nessun anno presente";
+        }
+    }
+
+    public function getMovieYear() {
+        return $this->year;
     }
 }
